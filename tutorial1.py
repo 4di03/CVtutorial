@@ -2,7 +2,7 @@ import cv2
 
 img = cv2.imread('assets/bball.jpeg')
 # changes x y of img by factor fx fy
-img = cv2.resize(img, (0, 0), fx=2.0, fy = 2.0)
+img = cv2.resize(img, (0, 0), fx=3.0, fy = 2.0)
 img = cv2.rotate(img, cv2.cv2.ROTATE_90_COUNTERCLOCKWISE)
 
 # writes new image to new file
