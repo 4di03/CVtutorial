@@ -11,6 +11,14 @@ with open(classesFile, 'r') as f:
 print(classNames)
 print(len(classNames))
 
+modelConfiguration = 'assets/yolov3.cfg'
+modelWeights = 'assets/yolov3.weights'
+
+net = cv2.dnn.readNetFromDarknet(modelConfiguration,modelWeights)
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+
+
 # def objectDetect(img):
 
 
